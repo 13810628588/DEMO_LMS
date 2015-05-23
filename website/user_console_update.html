@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+        <meta name="description" content="The original website of LY ecommercial solution platform">
+        <meta name="author" content="LY">
+        <title>最新漏洞-工信部漏洞响应平台</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/carousel.css">
+        <link href="css/fileinput.min.css" media="all" rel="stylesheet" type="text/css" />
+        <link rel="icon" href="icons/bootstrap.png">
+    </head>
+    <body>
+        <!--  ==========================页面导航========================  -->
+        <div class="navbar-wrapper">
+            <div class="container">
+                <nav class="navbar navbar-inverse navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="index.html">工信部漏洞相应平台</a>
+                        </div>
+                        <div style="height: 1px;" aria-expanded="false" id="navbar" class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav">
+                                <li ><a href="index_leak.html">最新漏洞</a></li>
+                                <li class="dropdown">
+                                    <a href="firm_bonus.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">厂商 <span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="firm_list.html">厂商列表</a></li>
+                                        <li><a href="firm_bonus.html">厂商奖金</a></li>
+                                    </ul>
+                                </li>
+                                <li class=""><a href="index_statistic.html">风云排行</a></li>
+                                <li><a href="#">积分兑换</a></li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right" style="margin-right:10px">
+                                <li>
+                                    <div style="padding-top: 10px;">
+                                        <a href="user_console.html" class="thumbnail" style="padding: 1px;margin-bottom: 0px;border-radius: 1px;">
+                                        <img src="assets/people.jpg" alt="image" style="width:30px;height:30px">
+                                        </a>
+                                    </div>
+                                </li>
+                                <li><a href="user_console.html">冰心</a></li>
+                                <li class="dropdown">
+                                    <a href="firm_bonus.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">更多 <span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="user_console_update.html">修改资料</a></li>
+                                        <li><a href="user_console_leak.html">提交漏洞</a></li>
+                                        <li><a href="index.html">退出登录</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="container" style="margin-top:80px;">
+            <div class="row">
+                <div class="col-md-3">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li role="presentation" class="active"><a onclick="switchPanel('infoDIV')" href="#" >基本信息</a></li>
+                        <li role="presentation"> <a onclick="switchPanel('commDIV')" href="#" >联系方式</a></li>
+                        <li role="presentation"><a onclick="switchPanel('addressDIV')" href="#" >收货地址</a></li>
+                        <li role="presentation"><a onclick="switchPanel('cashDIV')" href="#" >收款信息</a></li>
+                        <li role="presentation"><a onclick="switchPanel('teamDIV')" href="#" >团队</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-9">
+                    <div id="infoDIV">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">基本信息</h3>
+                            </div>
+                            <div class="panel-body">
+                                <form class="form-horizontal">
+                                    <div class="form-group">
+                                        <label for="input-id" class="col-sm-2 control-label">头像</label>
+                                        <div class="col-sm-9">
+                                            <img src="assets/people.jpg" class="img-thumbnail" alt="500x500" style="width: 140px; height: 140px;">
+                                            <input id="input-id" type="file" class="file" data-preview-file-type="text">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputName" class="col-sm-2 control-label">昵称</label>
+                                        <div class="col-sm-9">
+                                            <input type="input" class="form-control" id="inputName" disabled value="冰心">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputSex" class="col-sm-2 control-label">性别</label>
+                                        <div class="col-sm-9">
+                                            <label class="radio-inline">
+                                                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked> 男
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 女
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputDescription" class="col-sm-2 control-label">个人介绍</label>
+                                        <div class="col-sm-9">
+                                            <textarea class="form-control" rows="6" id="inputDescription"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-offset-2 col-sm-2">
+                                            <button type="button" class="btn btn-primary">保存</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="commDIV" style="display:none">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">联系信息</h3>
+                            </div>
+                            <div class="panel-body">
+                                <form class="form-horizontal">
+                                    <div class="form-group">
+                                        <label for="inputEmail" class="col-sm-2 control-label">邮箱</label>
+                                        <div class="col-sm-9">
+                                            <input type="input" class="form-control" id="inputEmail" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputMobile" class="col-sm-2 control-label">电话</label>
+                                        <div class="col-sm-9">
+                                            <input type="input" class="form-control" id="inputMobile" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputQQ" class="col-sm-2 control-label">QQ</label>
+                                        <div class="col-sm-9">
+                                            <input type="input" class="form-control" id="inputQQ" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-offset-2 col-sm-2">
+                                            <button type="button" class="btn btn-primary">保存</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="addressDIV" style="display:none">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">地址信息</h3>
+                            </div>
+                            <div class="panel-body">
+                                <form class="form-horizontal">
+                                   <div class="form-group">
+                                        <label for="inputName" class="col-sm-2 control-label">收件姓名</label>
+                                        <div class="col-sm-9">
+                                            <input type="input" class="form-control" id="inputName" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputAddress" class="col-sm-2 control-label">收件地址</label>
+                                        <div class="col-sm-9">
+                                            <input type="input" class="form-control" id="inputAddress" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-offset-2 col-sm-2">
+                                            <button type="button" class="btn btn-primary">保存</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="cashDIV" style="display:none">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">收款信息</h3>
+                            </div>
+                            <div class="panel-body">
+                                <form class="form-horizontal">
+                                   <div class="form-group">
+                                        <label for="inputAccount" class="col-sm-2 control-label">账号名称</label>
+                                        <div class="col-sm-9">
+                                            <input type="input" class="form-control" id="inputAccount" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputBank" class="col-sm-2 control-label">开户银行</label>
+                                        <div class="col-sm-9">
+                                            <input type="input" class="form-control" id="inputBank" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-offset-2 col-sm-2">
+                                            <button type="button" class="btn btn-primary">保存</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="teamDIV" style="display:none">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">团队信息</h3>
+                            </div>
+                            <div class="panel-body">
+                                暂无
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Marketing messaging and featurettes
+        ================================================== -->
+        <!-- Wrap the rest of the page in another container to center all the content. -->
+        <div class="container marketing" id="footerDIV">
+            <!-- FOOTER -->
+        </div>
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="js/ie10-viewport-bug-workaround.js"></script>
+        <script src="js/ly.js"></script>
+        <script src="js/fileinput.js" type="text/javascript"></script>
+        <script src="js/fileinput_locale_zh.js"></script>
+        <script>
+                            var switchPanel = function(divID){
+                            $.each([ 'infoDIV', 'commDIV', 'addressDIV','cashDIV','teamDIV' ], function(idx, val) {
+                            if(val===divID){
+                            $('#'+val).css('display','');
+                            }else{
+                            $('#'+val).css('display','none');
+                            }
+                            console.log('element ' + idx + 'is ' + val);
+                            });
+                            }
+                            $(document).ready(function() {
+                                $("#input-id").fileinput();
+                                $("#input-id").fileinput({'showUpload':false, 'previewFileType':'any'});
+                            });
+        </script>
+    </body>
+</html>

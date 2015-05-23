@@ -1,0 +1,17 @@
+a{
+	color: grey;
+}
+
+
+.processHistory {
+    background: transparent url("../assets/line.gif") repeat-y scroll 6px 0px;
+    overflow: hidden;
+    position: relative;
+}
+.processHistory dd{
+	background: transparent url("../assets/point.gif") no-repeat scroll 0px 0px;
+	padding-left: 20px;
+}
+.processHistory dd.end {
+    background: #FFF url("../assets/point.gif") no-repeat scroll 0px 0px;
+}
